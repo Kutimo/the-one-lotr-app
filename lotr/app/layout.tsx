@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import styles from "./layout.module.css"
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Lotr wiki",
@@ -9,7 +11,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body>{children}</body>
+    <body>
+    <header className={styles.header}>
+    <nav className={styles.nav}>
+      <Link href="/">Home</Link>
+      <Link href="/books">Books</Link>
+    </nav>
+    </header>
+     {children}
+    </body>
     </html>
   );
 }

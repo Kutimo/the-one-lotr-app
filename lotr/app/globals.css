@@ -1,4 +1,21 @@
+/*Global css values to be used throughout our project in different css.module files */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --bg: #faf7f2;
+    --card: #efe9df;
+    --card-hover: #e4dccf;
+    --placeholder: #d6cfc3;
+    --border: #d6cfc3;
+    --text: #2b2620;
+    --muted: #6b6257;
+    --accent: #b45309;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
 }
